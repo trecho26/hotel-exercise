@@ -56,7 +56,7 @@ export default function HotelPage({
 
 export async function getStaticPaths() {
   // Call an external API endpoint to get hotels
-  const res = await fetch("http://localhost:3000/api/hotels");
+  const res = await fetch(`${process.env.BASEURL}/api/hotels`);
   const response = await res.json();
 
   // Get the paths we want to pre-render based on hotels response
@@ -73,7 +73,7 @@ export const getStaticProps = (async ({ params }) => {
   // params contains the hotel `id`.
   // If the route is like /posts/1, then params.id is 1
   const res = await fetch(
-    `http://localhost:3000/api/hotels/${params?.hotelId}`
+    `${process.env.BASEURL}/api/hotels/${params?.hotelId}`
   );
   const hotel = await res.json();
 
