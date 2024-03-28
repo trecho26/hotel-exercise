@@ -6,7 +6,7 @@ import SearchInput from "@/components/SearchInput";
 import { useState } from "react";
 
 export const getStaticProps = (async (context) => {
-  const res = await fetch(`${process.env.BASEURL}/api/hotels`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/hotels`);
   const response = await res.json();
   return { props: { response } };
 }) satisfies GetStaticProps<{
@@ -19,7 +19,9 @@ export default function Home({
   const [hotelsData, sethotelsData] = useState(response.data);
 
   const handleSearch = async (search: string) => {
-    const res = await fetch(`${process.env.BASEURL}/api/hotels?name=${search}`);
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_API_URL}/api/hotels?name=${search}`
+    );
     const response = await res.json();
     sethotelsData(response.data);
   };
