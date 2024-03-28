@@ -5,7 +5,7 @@ import Image from "next/image";
 import Services from "@/components/Services";
 import StarIcon from "@/components/Icons/StarIcon";
 
-export default function Hotel({
+export default function HotelPage({
   hotel,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
