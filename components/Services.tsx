@@ -62,7 +62,10 @@ const Services = ({ services, detailView }: Props) => {
           </div>
         ))}
         {services.length > 3 && (
-          <div className="flex flex-col items-center ms-auto">
+          <div
+            data-testid="additional-services"
+            className="flex flex-col items-center ms-auto"
+          >
             <span className="flex w-[24px] h-[24px] justify-center items-center border-2 border-indigo-700 rounded text-indigo-700 font-medium">
               {services.length - 3}
             </span>
