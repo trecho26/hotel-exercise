@@ -13,5 +13,5 @@ Once installed, run the command `npm run dev` to launch the project
 Run the command `npm run test` to run all the tests.
 
 # Deployment
-1 - Connect the repo to Vercel's dashboard
-2 - Load up the environment variables needed
+1. Connect the repo to Vercel's dashboard
+2. Load up the environment variables needed
